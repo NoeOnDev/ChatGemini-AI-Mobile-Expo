@@ -8,7 +8,7 @@ function Portfolio() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center" href="#">
-            <img src="/portatil.png" alt="" width="50" height="45" className="d-inline-block align-text-top me-2" />
+            <img src="/portatil.png" alt="" width="50" height="50" className="d-inline-block align-text-top me-2" />
             NoeOnDev
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +32,6 @@ function Portfolio() {
         <p className="lead">Full Stack Developer</p>
         <p className="lead">I am a Full Stack Developer with experience in developing web applications using JavaScript, React, Node.js, Express, MongoDB, and more. I am passionate about learning new technologies and building software solutions.</p>
         </div>
-      </div>
-
-      <div className="container mt-2">
-
       </div>
     </div>
   );
