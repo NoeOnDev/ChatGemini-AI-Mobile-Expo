@@ -5,11 +5,8 @@ body {
     color: #ffffff;
 }
 
-.profile-info {
-  padding: 15px;
-}
-
 .banner {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,20 +14,20 @@ body {
     justify-content: center;
     border-radius: 20px;
   
-    background: #121212;
+    background: #ff0000;
     background: linear-gradient(
       135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
+      #000000 25%,
+      #212428 25%,
+      #212428 50%,
+      #000000 50%,
+      #000000 75%,
+      #212428 75%,
+      #212428
     );
-    background-size: 40px 40px;
+    background-size: 60px 60px;
 
-    animation: move 4s linear infinite;
+    animation: move 15s linear infinite;
   }
   
   @keyframes move {
@@ -38,6 +35,26 @@ body {
       background-position: 0 0;
     }
     100% {
-      background-position: 40px 40px;
+      background-position: 60px 60px;
     }
   }
+
+.profile-info {
+  padding: 15px;
+}
+
+.social-links {
+    position: absolute;
+    color: #ffffff;
+    top: 10px;
+    right: 10px;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.social-links a:hover {
+    color: #dddddd;
+}
