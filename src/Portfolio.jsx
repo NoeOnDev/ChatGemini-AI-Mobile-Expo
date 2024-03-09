@@ -25,16 +25,17 @@ function Portfolio() {
         </div>
       </nav>
 
-      <div className="container mt-5">
+      <div className="container mt-5 banner">
         <div className="profile-info">
           <img src="/noeon.jpeg" alt="Mi foto" width="150" height="150" className="img-fluid rounded-circle mb-3" />
+          <h1 className="display-4">NoeOnDev</h1>
+        <p className="lead">Full Stack Developer</p>
+        <p className="lead">I am a Full Stack Developer with experience in developing web applications using JavaScript, React, Node.js, Express, MongoDB, and more. I am passionate about learning new technologies and building software solutions.</p>
         </div>
       </div>
 
-      <div className="container mt-1">
-        <h1 className="display-4">NoeOnDev</h1>
-        <p className="lead">Full Stack Developer</p>
-        <p className="lead">I am a Full Stack Developer with experience in developing web applications using JavaScript, React, Node.js, Express, MongoDB, and more. I am passionate about learning new technologies and building software solutions.</p>
+      <div className="container mt-2">
+
       </div>
     </div>
   );
