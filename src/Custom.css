@@ -5,3 +5,13 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+.banner {
+  background: url('') no-repeat center center;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.profile-info {
+  padding: 20px;
+  border-radius: 15px;
+}

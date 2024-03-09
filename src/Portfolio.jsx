@@ -15,7 +15,7 @@ function Portfolio() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav ms-auto">
+            <div className="navbar-nav ms-auto">
               <a className="nav-link active me-4" aria-current="page" href="#">About</a>
               <a className="nav-link active me-4" aria-current="page" href="#">Resume</a>
               <a className="nav-link active me-4" aria-current="page" href="#">Portfolio</a>
@@ -24,6 +24,18 @@ function Portfolio() {
           </div>
         </div>
       </nav>
+
+      <div className="container mt-5">
+        <div className="profile-info">
+          <img src="/noeon.jpeg" alt="Mi foto" width="150" height="150" className="img-fluid rounded-circle mb-3" />
+        </div>
+      </div>
+
+      <div className="container mt-1">
+        <h1 className="display-4">NoeOnDev</h1>
+        <p className="lead">Full Stack Developer</p>
+        <p className="lead">I am a Full Stack Developer with experience in developing web applications using JavaScript, React, Node.js, Express, MongoDB, and more. I am passionate about learning new technologies and building software solutions.</p>
+      </div>
     </div>
   );
 }
