@@ -80,7 +80,7 @@ function Portfolio() {
         </div>
       </div>
       <div className="container mt-5 technologies">
-        <h2 className="mb-3">Stack Development Technologies</h2>
+        <h2 className="mb-3 title">Stack Development Technologies</h2>
         <ul>
           <li><SiReact /> React</li>
           <li><SiNextdotjs /> Next.js</li>
@@ -95,10 +95,10 @@ function Portfolio() {
           <li><SiSequelize /> Sequelize</li>
         </ul>
       </div>
-      <div className="container mt-5">
+      <div className="container mt-5 data">
         <div className="row">
           <div className="col-lg-6">
-          <h2 className="mb-3">Databases</h2>
+          <h2 className="mb-3 title">Databases</h2>
       <ul>
         <li><SiMongodb /> MongoDB</li>
         <li><SiMysql /> Mysql</li>
@@ -108,7 +108,7 @@ function Portfolio() {
       </ul>
     </div>
     <div className="col-lg-6">
-      <h2 className="mb-3">Languages</h2>
+      <h2 className="mb-3 title">Languages</h2>
       <ul>
         <li><SiPython /> Python</li>
         <li><SiTypescript /> Typescript</li>

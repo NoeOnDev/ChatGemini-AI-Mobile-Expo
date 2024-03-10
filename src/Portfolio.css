@@ -111,17 +111,49 @@ body {
     }
 }
 
-  
-  .technologies ul {
+
+.technologies ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .technologies li {
+}
+
+.technologies li {
     display: inline-block;
     margin: 0 10px;
     font-size: 1.2em;
-  }
+}
+
+.data {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 600;
+
+    background: linear-gradient(135deg,
+            #000000 25%,
+            #212428 25%,
+            #212428 50%,
+            #000000 50%,
+            #000000 75%,
+            #212428 75%,
+            #212428);
+    background-size: 60px 60px;
+
+    animation: move 15s linear infinite;
+}
+
+.data ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.data li {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
 
 @media (max-width: 731px) {}
 
