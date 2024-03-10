@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter, faLinkedinIn, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Custom.css';
+import './Portfolio.css';
 
 function Portfolio() {
   return (
@@ -43,14 +43,52 @@ function Portfolio() {
           </a>
         </div>
         <div className="profile-info">
-          <img src="/noeon.jpeg" alt="Mi foto" width="150" height="150" className="img-fluid rounded-circle mb-3 profile" />
+          <img src="/noeon.jpeg" alt="Mi foto" width="150" height="150" className="img-fluid rounded-circle mb-3 mt-3 profile" />
           <div className="info">
             <h1 className="title">Noé Alejandro Rodríguez Moto </h1>
             <p className="lead paraf">Full Stack Developer</p>
           </div>
         </div>
       </div>
-      {/* <p className="lead">I am a Full Stack Developer with experience in developing web applications using JavaScript, React, Node.js, Express, MongoDB, Mysql, and more. I am passionate about learning new technologies and building software solutions.</p>*/}
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-lg-4 technologies">
+            <h2 className="mb-3">Stack </h2>
+            <ul>
+              <li>React</li>
+              <li>Bootstrap</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Flask</li>
+              <li>Laravel</li>
+              <li>Spring</li>
+            </ul>
+          </div>
+          <div className="col-lg-4 technologies">
+            <h2 className="mb-3">Bases de datos</h2>
+            <ul>
+              <li>MongoDB</li>
+              <li>Mysql</li>
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+              <li>Redis</li>
+              <li>Oracle</li>
+              <li>SQL Server</li>
+            </ul>
+          </div>
+          <div className="col-lg-4 technologies">
+            <h2 className="mb-3">Lenguajes</h2>
+            <ul>
+              <li>Python</li>
+              <li>Typescript</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Go</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
