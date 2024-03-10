@@ -42,7 +42,7 @@ body {
 }
 
 .profile {
-    margin-right: 10rem;
+    margin-right: 13rem;
 }
 
 .info {
@@ -55,6 +55,11 @@ body {
 
 .title {
     font-size: 2.5em;
+}
+
+.paraf {
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .profile-info {
