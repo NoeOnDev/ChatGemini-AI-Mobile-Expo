@@ -1,5 +1,34 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXTwitter, faLinkedinIn, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import {
+  faXTwitter,
+  faLinkedinIn,
+  faGithub,
+  faYoutube,
+  faJava
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiBootstrap,
+  SiExpress,
+  SiNestjs,
+  SiDjango,
+  SiFlask,
+  SiLaravel,
+  SiSpring,
+  SiSequelize,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiMicrosoftsqlserver,
+  SiPython,
+  SiTypescript,
+  SiJavascript,
+  SiPhp,
+  SiGoland,
+} from 'react-icons/si';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Portfolio.css';
@@ -50,42 +79,45 @@ function Portfolio() {
           </div>
         </div>
       </div>
+      <div className="container mt-5 technologies">
+        <h2 className="mb-3">Stack Development Technologies</h2>
+        <ul>
+          <li><SiReact /> React</li>
+          <li><SiNextdotjs /> Next.js</li>
+          <li><SiBootstrap /> Bootstrap</li>
+          <li><SiNodedotjs /> Node.js</li>
+          <li><SiExpress /> Express</li>
+          <li><SiNestjs /> NestJs</li>
+          <li><SiDjango /> Django</li>
+          <li><SiFlask /> Flask</li>
+          <li><SiLaravel /> Laravel</li>
+          <li><SiSpring /> Spring</li>
+          <li><SiSequelize /> Sequelize</li>
+        </ul>
+      </div>
       <div className="container mt-5">
         <div className="row">
-          <div className="col-lg-4 technologies">
-            <h2 className="mb-3">Stack </h2>
-            <ul>
-              <li>React</li>
-              <li>Bootstrap</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>Flask</li>
-              <li>Laravel</li>
-              <li>Spring</li>
-            </ul>
-          </div>
-          <div className="col-lg-4 technologies">
-            <h2 className="mb-3">Bases de datos</h2>
-            <ul>
-              <li>MongoDB</li>
-              <li>Mysql</li>
-              <li>PostgreSQL</li>
-              <li>SQLite</li>
-              <li>Redis</li>
-              <li>Oracle</li>
-              <li>SQL Server</li>
-            </ul>
-          </div>
-          <div className="col-lg-4 technologies">
-            <h2 className="mb-3">Lenguajes</h2>
-            <ul>
-              <li>Python</li>
-              <li>Typescript</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>Go</li>
-              <li>Java</li>
-            </ul>
+          <div className="col-lg-6">
+          <h2 className="mb-3">Databases</h2>
+      <ul>
+        <li><SiMongodb /> MongoDB</li>
+        <li><SiMysql /> Mysql</li>
+        <li><SiPostgresql /> PostgreSQL</li>
+        <li><SiSqlite /> SQLite</li>
+        <li><SiMicrosoftsqlserver /> SQL Server</li>
+      </ul>
+    </div>
+    <div className="col-lg-6">
+      <h2 className="mb-3">Languages</h2>
+      <ul>
+        <li><SiPython /> Python</li>
+        <li><SiTypescript /> Typescript</li>
+        <li><SiJavascript /> JavaScript</li>
+        <li><SiPhp /> PHP</li>
+        <li><SiGoland /> Go</li>
+        <li><FontAwesomeIcon icon={faJava} /> Java</li>
+
+      </ul>
           </div>
         </div>
       </div>
