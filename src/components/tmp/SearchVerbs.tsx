@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../../styles/searchVerbs.css";
 
 interface Verb {
   meaning: string;
@@ -30,35 +31,39 @@ const SearchVerbs: React.FC = () => {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search for a verb"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+    <div className="search-verbs-container">
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search for a verb"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
       {errorMessage && <p>{errorMessage}</p>}
-      <table>
-        <thead>
-          <tr>
-            <th>Meaning</th>
-            <th>Present</th>
-            <th>Past</th>
-            <th>Past Participle</th>
-          </tr>
-        </thead>
-        <tbody>
-          {verbs.map((verb, index) => (
-            <tr key={index}>
-              <td>{verb.meaning}</td>
-              <td>{verb.present}</td>
-              <td>{verb.past}</td>
-              <td>{verb.past_participle}</td>
+      <div className="table-container">
+        <table className={verbs.length === 0 ? "hidden" : ""}>
+          <thead>
+            <tr>
+              <th>Meaning</th>
+              <th>Present</th>
+              <th>Past</th>
+              <th>Past Participle</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {verbs.map((verb, index) => (
+              <tr key={index}>
+                <td>{verb.meaning}</td>
+                <td>{verb.present}</td>
+                <td>{verb.past}</td>
+                <td>{verb.past_participle}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
