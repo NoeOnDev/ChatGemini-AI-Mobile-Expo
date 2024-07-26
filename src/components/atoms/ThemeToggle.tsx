@@ -1,16 +1,20 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { FaDesktop } from "react-icons/fa";
+import { BsMoonStars, BsSun } from "react-icons/bs";
 
 const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <button type="button" onClick={toggleTheme}>
-      {theme === "light"
-        ? "Switch to Dark Mode"
-        : theme === "dark"
-        ? "Switch to System Mode"
-        : "Switch to Light Mode"}
+      {theme === "light" ? (
+        <BsSun />
+      ) : theme === "dark" ? (
+        <BsMoonStars />
+      ) : (
+        <FaDesktop />
+      )}
     </button>
   );
 };
