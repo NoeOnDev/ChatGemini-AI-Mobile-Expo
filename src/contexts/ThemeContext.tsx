@@ -3,6 +3,7 @@ import { ThemeContextProps } from "../interfaces/ThemeContextInterfaces";
 
 export const ThemeContext = createContext<ThemeContextProps>({
   theme: "system",
+  systemTheme: "light",
   toggleTheme: () => {},
   setTheme: () => {},
 });
@@ -45,7 +46,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+    <ThemeContext.Provider
+      value={{ theme, systemTheme, toggleTheme, setTheme }}
+    >
       {children}
     </ThemeContext.Provider>
   );

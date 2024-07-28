@@ -2,6 +2,7 @@
 
 :root {
     --background-color: #ffffff;
+    --menu-background-color: #f8f9fa;
     --text-color: #000000;
     --hover-background-color: #f0f0f0;
     --selected-background-color: #e0e0e0;
@@ -11,6 +12,7 @@
 
 [data-theme="dark"] {
     --background-color: #242424;
+    --menu-background-color: #1e1e1e;
     --text-color: #ffffff;
     --hover-background-color: #3a3a3a;
     --selected-background-color: #3a3a3a;
