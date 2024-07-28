@@ -1,5 +1,6 @@
 export interface LogoSiteNameProps {
-    logoSrc: string;
+    darkSrc: string;
+    lightSrc: string;
     logoAlt: string;
     siteName: string;
 }

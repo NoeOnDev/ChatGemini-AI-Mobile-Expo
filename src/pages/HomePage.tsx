@@ -1,12 +1,18 @@
 import React from "react";
-import ThemeToggle from "../components/atoms/ThemeToggle";
+import Header from "../components/organism/Header";
+import logoDark from "../assets/logo_dark.svg";
+import logoLight from "../assets/logo_light.svg";
 
 const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
-      <ThemeToggle />
+      <Header
+        siteName="World community"
+        logoDarkSrc={logoDark}
+        logoLightSrc={logoLight}
+        logoAlt="World community"
+      />
+      <div></div>
     </div>
   );
 };

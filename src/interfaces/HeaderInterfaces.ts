@@ -1,5 +1,6 @@
 export interface HeaderProps {
     siteName: string;
-    logoSrc: string;
+    logoDarkSrc: string;
+    logoLightSrc: string;
     logoAlt: string;
 }

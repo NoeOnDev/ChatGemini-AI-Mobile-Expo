@@ -4,10 +4,20 @@ import ThemeToggle from "../atoms/ThemeToggle";
 import { HeaderProps } from "../../interfaces/HeaderInterfaces";
 import styles from "../../styles/Header.module.css";
 
-const Header: React.FC<HeaderProps> = ({ siteName, logoSrc, logoAlt }) => {
+const Header: React.FC<HeaderProps> = ({
+  siteName,
+  logoDarkSrc,
+  logoLightSrc,
+  logoAlt,
+}) => {
   return (
     <header className={styles.header}>
-      <LogoSiteName logoSrc={logoSrc} logoAlt={logoAlt} siteName={siteName} />
+      <LogoSiteName
+        darkSrc={logoDarkSrc}
+        lightSrc={logoLightSrc}
+        logoAlt={logoAlt}
+        siteName={siteName}
+      />
       <ThemeToggle />
     </header>
   );

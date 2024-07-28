@@ -1,4 +1,5 @@
 export interface LogoProps {
-    src: string;
+    darkSrc: string;
+    lightSrc: string;
     alt: string;
 }

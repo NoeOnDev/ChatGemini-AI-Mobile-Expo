@@ -5,13 +5,14 @@ import { LogoSiteNameProps } from "../../interfaces/LogoSiteNameInterfaces";
 import styles from "../../styles/LogoSiteName.module.css";
 
 const LogoSiteName: React.FC<LogoSiteNameProps> = ({
-  logoSrc,
+  darkSrc,
+  lightSrc,
   logoAlt,
   siteName,
 }) => {
   return (
     <div className={styles.container}>
-      <Logo src={logoSrc} alt={logoAlt} />
+      <Logo darkSrc={darkSrc} lightSrc={lightSrc} alt={logoAlt} />
       <SiteName name={siteName} />
     </div>
   );
