@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.siteName {
+    margin: 0;
+}
