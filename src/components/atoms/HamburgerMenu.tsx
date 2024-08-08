@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import styles from "../../styles/HamburgerMenu.module.css";
 
 const HamburgerMenu: React.FC = () => {
@@ -29,16 +30,24 @@ const HamburgerMenu: React.FC = () => {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to="/" onClick={toggleMenu}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about" onClick={toggleMenu}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to="/services" onClick={toggleMenu}>
+                Services
+              </Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/contact" onClick={toggleMenu}>
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>

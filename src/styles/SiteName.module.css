@@ -4,5 +4,6 @@
     font-family: var(--font-family);
     color: var(--text-color);
     font-size: 1.2rem;
+    font-weight: 900;
     margin: 0;
 }
