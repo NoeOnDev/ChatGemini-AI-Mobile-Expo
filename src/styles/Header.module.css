@@ -1,7 +1,17 @@
+@import './Variables.css';
+
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px 20px;
     background-color: var(--background-color);
+}
+
+.header .logoSiteName {
+    flex: 1;
+}
+
+.logoSiteName {
+    margin-left: 10px;
 }

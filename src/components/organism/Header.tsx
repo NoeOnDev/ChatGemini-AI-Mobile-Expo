@@ -1,6 +1,7 @@
 import React from "react";
 import LogoSiteName from "../molecules/LogoSiteName";
 import ThemeToggle from "../atoms/ThemeToggle";
+import HamburgerMenu from "../atoms/HamburgerMenu";
 import { HeaderProps } from "../../interfaces/HeaderInterfaces";
 import styles from "../../styles/Header.module.css";
 
@@ -12,12 +13,15 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className={styles.header}>
-      <LogoSiteName
-        darkSrc={logoDarkSrc}
-        lightSrc={logoLightSrc}
-        logoAlt={logoAlt}
-        siteName={siteName}
-      />
+      <HamburgerMenu />
+      <div className={styles.logoSiteName}>
+        <LogoSiteName
+          darkSrc={logoDarkSrc}
+          lightSrc={logoLightSrc}
+          logoAlt={logoAlt}
+          siteName={siteName}
+        />
+      </div>
       <ThemeToggle />
     </header>
   );

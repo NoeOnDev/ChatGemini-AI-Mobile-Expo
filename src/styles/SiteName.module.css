@@ -1,6 +1,8 @@
+@import './Variables.css';
+
 .siteName {
     font-family: var(--font-family);
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
 }
