@@ -78,6 +78,7 @@ export const styles = StyleSheet.create({
         marginTop: 10,
     },
     iconButton: {
-        marginHorizontal: 0,
+        marginTop: 5,
+        marginHorizontal: 5,
     },
 });

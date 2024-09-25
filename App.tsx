@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import * as Clipboard from 'expo-clipboard';
+import * as Speech from 'expo-speech';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import Markdown from 'react-native-markdown-display';
 import { styles } from './AppStyles';
@@ -86,9 +87,27 @@ const useChatLogic = () => {
 };
 
 const MessageItem = memo(({ item }: { item: Message }) => {
+  const [isSpeaking, setIsSpeaking] = useState(false);
+
   const copyToClipboard = async (text: string) => {
     await Clipboard.setStringAsync(text);
     Alert.alert('Copied to clipboard', 'The message has been copied to the clipboard.');
+  };
+
+  const speakText = async (text: string) => {
+    setIsSpeaking(true);
+    Speech.speak(text, {
+      language: 'es-MX',
+      pitch: 1.0,
+      rate: 1.0,
+      onDone: () => setIsSpeaking(false),
+      onError: () => setIsSpeaking(false),
+    });
+  };
+
+  const stopSpeaking = () => {
+    Speech.stop();
+    setIsSpeaking(false);
   };
 
   return (
@@ -114,6 +133,23 @@ const MessageItem = memo(({ item }: { item: Message }) => {
             >
               <Ionicons name="copy" size={20} color="#007AFF" />
             </TouchableOpacity>
+            {isSpeaking ? (
+              <TouchableOpacity
+                activeOpacity={0.7}
+                style={styles.iconButton}
+                onPress={stopSpeaking}
+              >
+                <Ionicons name="stop" size={20} color="#007AFF" />
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity
+                activeOpacity={0.7}
+                style={styles.iconButton}
+                onPress={() => speakText(item.answer)}
+              >
+                <Ionicons name="volume-high" size={20} color="#007AFF" />
+              </TouchableOpacity>
+            )}
           </View>
         </View>
       ) : null}
