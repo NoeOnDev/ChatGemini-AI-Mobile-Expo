@@ -16,7 +16,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import Markdown from 'react-native-markdown-display';
 import { styles } from './AppStyles';
 
-const API_KEY = ''
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY as string;
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
@@ -136,6 +136,7 @@ function App() {
 
   return (
     <ImageBackground
+      source={require('./background.jpg')}
       style={styles.container}
     >
       <StatusBar backgroundColor={'#007AFF'} />
