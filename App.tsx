@@ -12,6 +12,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import * as Clipboard from 'expo-clipboard';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import Markdown from 'react-native-markdown-display';
 import { styles } from './AppStyles';
@@ -84,25 +85,41 @@ const useChatLogic = () => {
   };
 };
 
-const MessageItem = memo(({ item }: { item: Message }) => (
-  <View>
-    <View style={[styles.messageContainer, styles.userMessage]}>
-      <Text style={styles.userText}>{item.question}</Text>
-    </View>
-    {item.answer ? (
-      <View style={[styles.messageContainer, styles.botMessage]}>
-        <Markdown
-          style={{
-            body: styles.botText,
-            text: styles.botText,
-          }}
-        >
-          {item.answer}
-        </Markdown>
+const MessageItem = memo(({ item }: { item: Message }) => {
+  const copyToClipboard = async (text: string) => {
+    await Clipboard.setStringAsync(text);
+    Alert.alert('Copied to clipboard', 'The message has been copied to the clipboard.');
+  };
+
+  return (
+    <View>
+      <View style={[styles.messageContainer, styles.userMessage]}>
+        <Text style={styles.userText}>{item.question}</Text>
       </View>
-    ) : null}
-  </View>
-));
+      {item.answer ? (
+        <View style={[styles.messageContainer, styles.botMessage]}>
+          <Markdown
+            style={{
+              body: styles.botText,
+              text: styles.botText,
+            }}
+          >
+            {item.answer}
+          </Markdown>
+          <View style={styles.iconBar}>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              style={styles.iconButton}
+              onPress={() => copyToClipboard(item.answer)}
+            >
+              <Ionicons name="copy" size={20} color="#007AFF" />
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : null}
+    </View>
+  );
+});
 
 const InputArea = ({ query, setQuery, onSendPress, isLoading }: any) => (
   <View style={styles.inputContainer}>

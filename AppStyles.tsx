@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         maxWidth: '85%',
         padding: 10,
         borderRadius: 15,
-        flexDirection: 'row',
+        flexDirection: 'column',
     },
     userMessage: {
         backgroundColor: '#007AFF',
@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
     },
     textInput: {
         flex: 1,
-        minHeight: 40,
+        minHeight: 45,
         maxHeight: 100,
         borderColor: '#ddd',
         borderWidth: 1,
@@ -60,5 +60,24 @@ export const styles = StyleSheet.create({
         color: '#000',
         fontSize: 20,
         fontWeight: 'bold',
+    },
+    micButton: {
+        marginRight: 10,
+    },
+    copyButton: {
+        marginLeft: 10,
+        justifyContent: 'center',
+    },
+    iconBar: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        paddingVertical: 5,
+        borderTopWidth: 1,
+        borderTopColor: '#ddd',
+        marginTop: 10,
+    },
+    iconButton: {
+        marginHorizontal: 0,
     },
 });
