@@ -86,6 +86,20 @@ const useChatLogic = () => {
   };
 };
 
+const stripMarkdown = (text: string): string => {
+  return text
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/#+\s/g, '')
+    .replace(/[*_~`]/g, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[.*?\]\(.*?\)/g, '')
+    .replace(/- /g, '')
+    .replace(/>\s/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+};
+
 const MessageItem = memo(({ item }: { item: Message }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
@@ -95,8 +109,9 @@ const MessageItem = memo(({ item }: { item: Message }) => {
   };
 
   const speakText = async (text: string) => {
+    const cleanText = stripMarkdown(text);
     setIsSpeaking(true);
-    Speech.speak(text, {
+    Speech.speak(cleanText, {
       language: 'es-MX',
       pitch: 1.0,
       rate: 1.0,
