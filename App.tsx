@@ -105,7 +105,6 @@ const MessageItem = memo(({ item }: { item: Message }) => {
 
   const copyToClipboard = async (text: string) => {
     await Clipboard.setStringAsync(text);
-    Alert.alert('Copied to clipboard', 'The message has been copied to the clipboard.');
   };
 
   const speakText = async (text: string) => {
@@ -146,7 +145,7 @@ const MessageItem = memo(({ item }: { item: Message }) => {
               style={styles.iconButton}
               onPress={() => copyToClipboard(item.answer)}
             >
-              <Ionicons name="copy" size={20} color="#007AFF" />
+              <Ionicons name="copy-outline" size={20} color="#007AFF" />
             </TouchableOpacity>
             {isSpeaking ? (
               <TouchableOpacity
@@ -154,7 +153,7 @@ const MessageItem = memo(({ item }: { item: Message }) => {
                 style={styles.iconButton}
                 onPress={stopSpeaking}
               >
-                <Ionicons name="stop" size={20} color="#007AFF" />
+                <Ionicons name="stop-circle" size={20} color="#007AFF" />
               </TouchableOpacity>
             ) : (
               <TouchableOpacity
@@ -186,7 +185,7 @@ const InputArea = ({ query, setQuery, onSendPress, isLoading }: any) => (
       {isLoading ? (
         <ActivityIndicator size="small" color="#007AFF" />
       ) : (
-        <Ionicons name="send" size={28} color="#007AFF" />
+        <Ionicons name="send" size={22} color="#007AFF" />
       )}
     </TouchableOpacity>
   </View>

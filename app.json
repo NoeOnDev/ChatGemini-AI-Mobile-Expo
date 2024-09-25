@@ -12,28 +12,17 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true,
-      "infoPlist": {
-        "NSMicrophoneUsageDescription": "This app uses the microphone to recognize speech."
-      }
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "permissions": ["RECORD_AUDIO"]
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      [
-        "expo-speech-recognition",
-        {
-          "speechRecognitionPermission": "This app uses speech recognition to convert speech to text."
-        }
-      ]
-    ]
+    "plugins": ["expo-router"]
   }
 }
