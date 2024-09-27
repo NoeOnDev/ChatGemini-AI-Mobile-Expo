@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { FlatList, SafeAreaView, StatusBar, ImageBackground, View, Text } from 'react-native';
-import { MessageiTEM}
+import MessageItem from './components/MessageItem';
+import InputArea from './components/InputArea';
 import { useChatLogic } from './hooks/useChatLogic';
 import { styles } from './AppStyles';
 
